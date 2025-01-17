@@ -40,3 +40,9 @@ To customize a domain name, please refer to [Github Pages](https://docs.github.c
 
 - [vuepress](https://vuepress.vuejs.org/)
 - [vuepress-theme-plume](https://theme-plume.vuejs.press/)
+```sh
+# 主题提供了一个 命令行工具，帮助您构建一个基本项目。您可以通过运行以下命令，启动 安装向导。
+pnpm create vuepress-theme-plume@latest
+
+```
+- ![用命令安装](img.png)

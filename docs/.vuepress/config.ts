@@ -4,7 +4,7 @@ import {plumeTheme} from 'vuepress-theme-plume'
 import * as path from "node:path";
 
 export default defineUserConfig({
-    base: '/docs/',
+    base: '/docs/', // 部署站点的基础路径(如github page 对应的仓库名【docs】)
     lang: 'zh-CN',
     title: 'Lidon',
     description: '',
@@ -172,10 +172,10 @@ export default defineUserConfig({
         encrypt: {},
 
     }),
-    alias: {
-        "@theme/Nav/VPNavBarTitle.vue": path.resolve(
-            __dirname,
-            "./theme/components/NavBarTitle.vue"
-        ),
-    },
+    // alias: {
+    //     "@theme/Nav/VPNavBarTitle.vue": path.resolve(
+    //         __dirname,
+    //         "./theme/components/NavBarTitle.vue"
+    //     ),
+    // },
 })

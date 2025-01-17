@@ -2,6 +2,12 @@
 
 网站使用 [vuepress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) 构建生成。
 
+```sh
+# pnpm 安装
+pnpm create vuepress-theme-plume@latest
+
+```
+- ![用命令安装](img.png)
 ## Install
 
 ```sh
