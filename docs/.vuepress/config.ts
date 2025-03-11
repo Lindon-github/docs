@@ -8,7 +8,9 @@ export default defineUserConfig({
     lang: 'zh-CN',
     title: 'Lidon',
     description: '',
-
+    head: [
+        ['link', {rel: 'icon', href: 'logo.ico'}],
+    ],
     bundler: viteBundler(),
     shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
