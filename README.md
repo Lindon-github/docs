@@ -1,48 +1,64 @@
-# lidon
+# Lindon's personal blog
 
-The Site is generated using [vuepress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+#### 一、Use of the Site [vuepress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) build generation。
 
-## Install
 
-```sh
-pnpm i
-```
+- vue3 + ts + vite + router construct
+- This project can meet the needs of `blog`, `notes`, `knowledge base`, `product documentation`
 
-## Usage
+#### 二、Create a project
 
-```sh
-# start dev server
-pnpm docs:dev
-# build for production
-pnpm docs:build
-# preview production build in local
-pnpm docs:preview
-# update vuepress and theme
-pnpm vp-update
-```
+- Create using tools such as `pnpm`, `yarn`, and `npm` (recommended `pnpm`)
 
-## Deploy to GitHub Pages
+```js
+// pnpm install
 
-The plume theme has been created with GitHub Actions: `.github/workflows/docs-deploy.yml`. You also need to make the following settings in the GitHub repository:
-
-- [ ] `settings > Actions > General`, Scroll to the bottom of the page, under `Workflow permissions`, check `Read and write permissions`, and click the save button.
-
-- [ ] `settings > Pages`, In `Build and deployment`, select `Deploy from a branch` for `Source`, choose `gh-pages` for `Branch`, and click the save button.
-  (The `gh-pages` branch may not exist upon first creation. You can complete the above setup first, push the code to the main branch, wait for `github actions` to finish, and then proceed with the setup.)
-
-- [ ] Modify the `base` option in `docs/.vuepress/config.ts`:
-  - If you are planning to deploy to `https://<USERNAME>.github.io/`, you can skip this step as `base` defaults to `"/"`.
-  - If you are planning to deploy to `https://<USERNAME>.github.io/<REPO>/`, meaning your repository URL is `https://github.com/<USERNAME>/<REPO>`, set `base` to `"/<REPO>/"`.
-
-To customize a domain name, please refer to [Github Pages](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
-
-## Documents
-
-- [vuepress](https://vuepress.vuejs.org/)
-- [vuepress-theme-plume](https://theme-plume.vuejs.press/)
-```sh
-# 主题提供了一个 命令行工具，帮助您构建一个基本项目。您可以通过运行以下命令，启动 安装向导。
 pnpm create vuepress-theme-plume@latest
 
 ```
-- ![用命令安装](img.png)
+- Create Diagram
+
+![用命令安装](img.png)
+
+####  三、Install dependencies
+
+```js
+pnpm i
+```
+
+####  四、startup project
+
+```js
+
+// Start development service
+pnpm docs:dev
+
+// Build production package
+pnpm docs:build
+
+// Build production package
+pnpm docs:preview
+
+// Update vuepress and themes
+pnpm vp-update
+```
+
+####  Deploy to GitHub Pages
+
+Theme has been created github actions: `.github/workflows/docs-deploy.yml`，You also need to make the following settings in the GitHub repository：
+
+- [ ] `settings > Actions > General`，Pull to the bottom of the page, in `Workflow permissions` Next, check the box `Read and write permissions`，And click the save button
+
+- [ ] `settings > Pages`, in `Build and deployment` centre，`Source` select `Deploy from a branch`, `Branch` select `gh-pages`，And click the save button
+  (The first creation may not have a 'gh pages' branch. You can complete the above settings first, push the code to the main branch once, and wait for the' GitHub actions' to complete before setting it up.)
+
+- [ ] Modify the 'base' option in 'docs/. vuepress/config. ts':
+  - If you are planning to publish to 'https://<USERNAME>. github. io/', you can skip this step because 'base' defaults to '/'.
+  - If you are planning to publish to<https://<USERNAME>. lithub. io/<REPO>/>, which means your warehouse address is` https://github.com/ <USERNAME>/<REPO>` ， Then set 'base' to '/<REPO>/'.
+
+If you need to customize a domain name, please refer to [Github Pages document](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
+
+## document
+
+- [vuepress](https://vuepress.vuejs.org/)
+- [vuepress-theme-plume](https://theme-plume.vuejs.press/)

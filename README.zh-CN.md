@@ -1,33 +1,48 @@
-# lidon
+# Lindon 个人博客
 
-网站使用 [vuepress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) 构建生成。
+#### 一、网站使用 [vuepress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) 构建生成。
+
+
+- vue3 + ts + vite + router 构建
+- 本项目可满足 `博客` `笔记` `知识库` `产品文档` 的构建
+
+#### 二、创建项目
+
+- 通过 `pnpm` `yarn` `npm` 等工具创建(推荐`pnpm`) 
 
 ```sh
 # pnpm 安装
 pnpm create vuepress-theme-plume@latest
 
 ```
-- ![用命令安装](img.png)
-## Install
+- 创建图示
 
-```sh
+![用命令安装](img.png)
+
+####  三、安装依赖
+
+```js
 pnpm i
 ```
 
-## Usage
+####  四、启动项目
 
-```sh
-# 启动开发服务
+```js
+
+// 启动开发服务
 pnpm docs:dev
-# 构建生产包
+
+// 构建生产包
 pnpm docs:build
-# 本地预览生产服务
+
+// 本地预览生产服务
 pnpm docs:preview
-# 更新 vuepress 和主题
+
+// 更新 vuepress 和主题
 pnpm vp-update
 ```
 
-## 部署到 GitHub Pages
+####  五、部署到 GitHub Pages
 
 主题已创建 github actions: `.github/workflows/docs-deploy.yml`，你还需要在 github 仓库中进行以下设置：
 
