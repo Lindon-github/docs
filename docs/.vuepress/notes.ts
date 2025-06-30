@@ -6,8 +6,13 @@ const demoNote = defineNoteConfig({
   sidebar: ['', '1', '2'],
 })
 
+const frontNote = defineNoteConfig({
+  dir: 'front',
+  link: '/front',
+  sidebar: ['1', '2'],
+})
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [demoNote],
+  notes: [demoNote,frontNote],
 })

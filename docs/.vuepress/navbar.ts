@@ -39,7 +39,10 @@ export const navbar = defineNavbarConfig([
         icon:
             'mdi:note-text-outline',
         items:
-            [{text: '我的随笔', link: '/notes/note/README.md'}]
+            [
+                {text: '我的随笔', link: '/notes/note/README.md'},
+                {text: 'front面试', link: '/notes/front/README.md'}
+            ]
     }
     ,
     {
