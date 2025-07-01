@@ -8,9 +8,9 @@ import {notes} from './notes'
 export default defineThemeConfig({
     logo: 'https://foruda.gitee.com/avatar/1677043697722550946/5263647_guodong_ll_1578983441.png',
     appearance: false,  // 配置 深色模式
-
+    // 社交链接
     social: [
-        {icon: 'github', link: '/'},
+        // {icon: 'github', link: '/'},
     ],
     // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
     // aside: true, // 页内侧边栏， 默认显示在右侧
