@@ -8,4 +8,4 @@ permalink: /article/qpk0z8by/
 draft: true
 ---
 
-<CustomComponent />
+<CustomComponent/>

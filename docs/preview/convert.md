@@ -1,5 +1,6 @@
 ---
 title: 2025年春节：传统与现代的交融
+cover: /images/img.png  
 createTime: 2025/01/23 08:48:29
 permalink: /article/c1i5tc0q/
 ---
@@ -45,7 +46,7 @@ permalink: /article/c1i5tc0q/
 2025年的春节是一个充满活力与希望的节日。在这个特殊的时刻里，我们既感受到了传统习俗所带来的温暖与归属感，又见证了现代科技给生活带来的便捷与惊喜。更重要的是，在这样一个全球化的时代背景下，春节所蕴含的文化价值正逐渐被世界所认识和接受，成为中华儿女向全世界展示民族文化自信的重要窗口。让我们珍惜这份宝贵的文化遗产，在新的一年里携手共进，创造更加美好的未来！
 
 
-```ts {1,7-9}  title=".vuepress/config.ts"
+<!-- ```ts {1,7-9}  title=".vuepress/config.ts"
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 
@@ -62,7 +63,7 @@ export default defineUserConfig({
 ```md:no-v-pre
 <!-- 这里会被 Vue 编译 -->
 
-1 + 2 + 3 = {{ 1 + 2 + 3 }}
+<!-- 1 + 2 + 3 = {{ 1 + 2 + 3 }}
 ```
 
 ```js:no-v-pre
@@ -74,4 +75,4 @@ const onePlusTwoPlusThree = {{ 1 + 2 + 3 }}
 
 一加一等于： {{ 1 + 1 }}
 
-<span v-for="i in 3"> span: {{ i }} </span>
+<span v-for="i in 3"> span: {{ i }} </span> --> 

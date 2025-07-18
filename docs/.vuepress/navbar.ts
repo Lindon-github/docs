@@ -41,7 +41,7 @@ export const navbar = defineNavbarConfig([
         items:
             [
                 {text: '我的随笔', link: '/notes/note/README.md'},
-                {text: 'front面试', link: '/notes/front/README.md'}
+                {text: '面试', link: 'front/b6m3o8da/'}
             ]
     }
     ,
