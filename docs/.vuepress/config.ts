@@ -1,9 +1,6 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-import * as path from "node:path";
-import * as trace_events from "node:trace_events";
-import { sassFalse } from "sass-embedded";
 /**
  *  frontmatter 用法  https://v2.vuepress.vuejs.org/zh/reference/frontmatter.html
  */
@@ -15,95 +12,54 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: 'favicon.ico' }],
   ],
+  locales: {
+    '/': {
+      title: 'Lidon Blog',
+      lang: 'zh-CN',
+      description: 'Lidon Blog Site',
+    },
+    '/en/': {
+      title: 'Lidon Blog',
+      lang: 'en-US',
+      description: 'Lidon Blog Site',
+    },
+  },
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
-
   theme: plumeTheme({
-    /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
-    // hostname: 'https://your_site_url',
-
-    /* 文档仓库配置，用于 editLink */
-    // docsRepo: '',
-    // docsDir: 'docs',
-    // docsBranch: '',
-
-    /* 页内信息 */
-    // editLink: true,
-    // lastUpdated: true,
-    // contributors: true,
-    // changelog: false,
-
-    /**
-     * 博客
-     * frontmatter  https://theme-plume.vuejs.press/config/frontmatter/basic/
-     * @see https://theme-plume.vuejs.press/config/basic/#blog
-     */
-    // blog: false, // 禁用博客
-    blog: {
-      postList: true, // 是否启用文章列表页
-      tags: true, // 是否启用标签页
-      archives: true, // 是否启用归档页
-      categories: true, // 是否启用分类页
-      postCover: {
-        layout: "right",
-        ratio: '16:9',
-        width: 300,
-        compact: false, // 是否紧凑
-      },
-      pagination: 15, // 每页显示文章数量
-    },
-
-
-    /* 博客文章页面链接前缀 默认是article,不支持在plume.config.ts中配置 */
-    article: '/article/',
-
+    // 添加您的部署域名
+    hostname: 'https://plus-wave.github.io/',
+    // copyright: 'CC-BY-NC-SA-4.0',
+    // 贡献者
     contributors: false,
-    /**
-     * 编译缓存，加快编译速度
-     * @see https://theme-plume.vuejs.press/config/basic/#cache
-     */
-    cache: 'filesystem',
 
-    /**
-     * 为 markdown 文件自动添加 frontmatter 配置
-     * @see https://theme-plume.vuejs.press/config/basic/#autofrontmatter
-     */
     autoFrontmatter: {
-      permalink: true,  // 是否生成永久链接
+      permalink: true, // 是否生成永久链接
       createTime: true, // 是否生成创建时间
-      title: true,      // 是否生成标题
+      title: true, // 是否生成标题
+    },
+    
+    search: { 
+      provider: 'algolia',
+      appId: "I76E33RAQW",
+      apiKey: "2f441d2c2736f879a5fe5c73efdaaab5",
+      indexName: "plus-waveio",
     },
 
     plugins: {
+      git: true,
+
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
-      // shiki: {
-      //   // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-      //   languages: ['shell', 'bash', 'typescript', 'javascript'],
-      //   twoslash: true, // 启用 twoslash
-      //   whitespace: true, // 启用 空格/Tab 高亮
-      //   lineNumbers: true, // 启用行号
-      // },
-
-      /* 本地搜索, 默认启用 */
-      // search: true,
-
-      /**
-       * Algolia DocSearch
-       * 启用此搜索需要将 本地搜索 search 设置为 false
-       * @see https://theme-plume.vuejs.press/config/plugins/search/#algolia-docsearch
-       */
-      // docsearch: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      // },
-
-      /* 文章字数统计、阅读时间，设置为 false 则禁用 */
-      // readingTime: true,
-
+      shiki: {
+        // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
+        languages: ['shell', 'bash', 'typescript', 'javascript'],
+        twoslash: true, // 启用 twoslash
+        whitespace: true, // 启用 空格/Tab 高亮
+        lineNumbers: true, // 启用行号
+      },
       /**
        * markdown enhance
        * @see https://theme-plume.vuejs.press/config/plugins/markdown-enhance/
@@ -115,6 +71,12 @@ export default defineUserConfig({
       //   flowchart: true,
       // },
 
+      markdownImage: {
+        // figure: true,
+        lazyload: true,
+        mark: true,
+        size: true,
+    },
       /**
        *  markdown power
        * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
@@ -166,25 +128,42 @@ export default defineUserConfig({
        * 评论 comments
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
-      // comment: {
-      //   provider: '', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-      //   comment: true,
-      //   repo: '',
-      //   repoId: '',
-      //   category: '',
-      //   categoryId: '',
-      //   mapping: 'pathname',
-      //   reactionsEnabled: true,
-      //   inputPosition: 'top',
-      // },
+      comment: {
+        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        comment: true,
+        repo: 'PLUS-WAVE/PLUS-WAVE.github.io',
+        repoId: 'R_kgDONTjEgw',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDONTjEg84CkjoX',
+        mapping: 'pathname',
+        reactionsEnabled: true,
+        inputPosition: 'top',
+      },
+
+      /**
+       *  本地搜索, 默认启用
+       * */
+      // search: true,
+      /**
+       * 文章字数统计、阅读时间，设置为 false 则禁用
+       * */
+      // readingTime: true,
+      /**
+       * Algolia DocSearch
+       * 启用此搜索需要将 本地搜索 search 设置为 false
+       * @see https://theme-plume.vuejs.press/config/plugins/search/#algolia-docsearch
+       */
+      docsearch: {
+        appId: "I76E33RAQW",
+        apiKey: "5a647a9266ea269c5c219a4af315b3f3",
+        indexName: "plus-waveio",
+      },
+      /**
+       * 加密功能
+       * @see https://theme-plume.vuejs.press/guide/features/encryption/
+       */
+      encrypt: {},
     },
-
-    /**
-     * 加密功能
-     * @see https://theme-plume.vuejs.press/guide/features/encryption/
-     */
-    encrypt: {},
-
   }),
   // alias: {
   //     "@theme/Nav/VPNavBarTitle.vue": path.resolve(
