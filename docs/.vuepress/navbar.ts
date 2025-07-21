@@ -3,16 +3,17 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 export const zhNavbar = defineNavbarConfig([
   { text: '🏠首页', link: '/' },
   { text: '📑博客', link: '/blog/' },
-  { text: '🏷️标签', link: '/blog/tags/' },
-  { text: '🗄️归档', link: '/blog/archives/' },
+  // { text: '🏷️标签', link: '/blog/tags/' },
+  // { text: '🗄️归档', link: '/blog/archives/' },
   {
-    text: '🗂️系列笔记',
+    text: '🗂️我的笔记',
     items: [
+      { text: 'interview', link: '/notes/interview/', icon: 'skill-icons:javascript' },
       { text: '3DV Course', link: '/notes/3DV Course/', icon: 'gis:cube-3d' },
-      { text: 'C++', link: '/notes/C++/', icon: 'vscode-icons:file-type-cpp3'},
+      { text: 'C++', link: '/notes/C++/', icon: 'vscode-icons:file-type-cpp3' },
       { text: 'OpenGL', link: '/notes/OpenGL/', icon: 'devicon:opengl' },
       { text: 'Experience', link: '/notes/Experience/', icon: 'fxemoji:bluebook' },
-      { text: 'front', link: '/notes/front/', icon: 'fxemoji:bluebook' },
+
     ]
   },
 ])

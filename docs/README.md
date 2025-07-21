@@ -2,7 +2,7 @@
 home: true
 config:
  -
-    type: hero
+    type: banner 
     full: true
     background: tint-plate
     hero:
@@ -14,8 +14,11 @@ config:
           theme: brand
           text: 📑博客
           link: /blog/
-#        -
-#          theme: alt
-#          text: Github →
-#          link: /
+        -
+          theme: alt
+          text: CSDN👉
+          link: https://blog.csdn.net/weixin_46252229?type=blog
 ---
+
+<!-- more -->
+type: hero | banner

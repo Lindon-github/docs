@@ -68,9 +68,7 @@ export default defineThemeConfig({
     contentFile: path.join(__dirname, 'bulletin.md'),
     enablePage: true,
     // 页面显示暂未研究透彻
-    // enablePage: (page) => {
-    //     return page.path === 'front/b6m3o8da/'
-    // }
+    // enablePage: page => page.path === '/article/hidden/',
 
   },
   /* 站点页脚 */

@@ -4,7 +4,7 @@ draft: true
 tags:
   - markdown
 createTime: 2025/01/17 16:36:33
-permalink: /article/0lp6lt1j/
+permalink: /article/markdown/
 ---
 ## 标题 2
 
