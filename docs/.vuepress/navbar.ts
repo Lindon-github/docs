@@ -9,13 +9,9 @@ export const zhNavbar = defineNavbarConfig([
     text: '🗂️我的笔记',
     items: [
       { text: 'interview', link: '/notes/interview/', icon: 'skill-icons:javascript' },
-      { text: '3DV Course', link: '/notes/3DV Course/', icon: 'gis:cube-3d' },
-      { text: 'C++', link: '/notes/C++/', icon: 'vscode-icons:file-type-cpp3' },
-      { text: 'OpenGL', link: '/notes/OpenGL/', icon: 'devicon:opengl' },
-      { text: 'Experience', link: '/notes/Experience/', icon: 'fxemoji:bluebook' },
-
     ]
   },
+  { text: '站点导航', link: '/links/', icon: 'flat-color-icons:redo' },
 ])
 
 export const enNavbar = defineNavbarConfig([

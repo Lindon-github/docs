@@ -1,8 +1,35 @@
 ---
 permalink: /links/
 title: 站点导航
+draft: true
 createTime: 2025/01/23 16:19:24
 ---
+
+## 主题
+
+<CardGrid>
+    <LinkCard
+      title="plumeTheme"
+      icon="https://theme-plume.vuejs.press/plume.png"
+      href="https://theme-plume.vuejs.press/"
+      description="vuepress-theme-plume 是一个基于 VuePress 的主题，无论您是想写 生活类博客、技术类博客、 或者是 产品文档、知识库、系列文档
+      等，主题都可以满足您的需求"
+    />
+    <LinkCard
+      title="VuePress Theme Hope"
+      icon="https://theme-hope-assets.vuejs.press/logo.svg"
+      href="https://theme-hope.vuejs.press/zh/"
+      description="一个具有强大功能的 vuepress 主题✨"
+    />
+    
+<LinkCard
+    title="vuepress-reco"
+    icon="https://theme-reco.vuejs.press/logo.png"
+    href="https://theme-reco.vuejs.press/"
+    description="一款简洁的 vuepress 博客 & 文档 主题。"
+    />
+    
+</CardGrid>
 
 ## 前端站点
 
@@ -16,6 +43,11 @@ createTime: 2025/01/23 16:19:24
     title="element-ui" 
     icon="https://element.eleme.cn/static/theme-index-blue.c38b733.png"
     href="https://element.eleme.cn/#/zh-CN/guide/design" 
+  />
+ <LinkCard 
+    title="VitePress" 
+    href="https://vitepress.dev/zh/" 
+    icon="https://vitepress.dev/vitepress-logo-mini.svg"
   />
  <LinkCard 
     title="VuePress" 

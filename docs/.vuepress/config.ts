@@ -1,6 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import * as path from "node:path";
 /**
  *  frontmatter 用法  https://v2.vuepress.vuejs.org/zh/reference/frontmatter.html
  */
@@ -42,13 +43,21 @@ export default defineUserConfig({
     * 加密功能
     * @see https://theme-plume.vuejs.press/guide/features/encryption/
     */
-    encrypt: {},
-    search: {
-      provider: 'algolia',
-      appId: "I76E33RAQW",
-      apiKey: "2f441d2c2736f879a5fe5c73efdaaab5",
-      indexName: "plus-waveio",
+    encrypt: {
+      rules: {
+        "/article/hidden/": "20250723",
+      }
     },
+    search: {
+      // 本地搜索
+      provider: 'local',
+    },
+    // search: {
+    //   provider: 'algolia',
+    //   appId: "I76E33RAQW",
+    //   apiKey: "2f441d2c2736f879a5fe5c73efdaaab5",
+    //   indexName: "plus-waveio",
+    // },
     markdown: {
       chat: true,
     },
@@ -165,11 +174,12 @@ export default defineUserConfig({
         indexName: "plus-waveio",
       },
     },
+
   }),
   // alias: {
-  //     "@theme/Nav/VPNavBarTitle.vue": path.resolve(
-  //         __dirname,
-  //         "./theme/components/NavBarTitle.vue"
-  //     ),
+  //   "@theme/Nav/VPNavBarTitle.vue": path.resolve(
+  //     __dirname,
+  //     "./theme/components/NavBarTitle.vue"
+  //   ),
   // },
 })

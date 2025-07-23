@@ -18,7 +18,6 @@ import SparklesText from "./SparklesText.vue";
       :href="theme.home ?? routeLocale"
     >
       <slot name="nav-bar-title-before" />
-
       <VPImage
         v-if="theme.logo"
         class="logo"
@@ -34,7 +33,7 @@ import SparklesText from "./SparklesText.vue";
       <div class="deng">
         <div class="xian"></div>
         <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">年</div></div>
+          <div class="deng-b"><div class="deng-t">泰</div></div>
         </div>
         <div class="shui shui-a">
           <div class="shui-c"></div>
@@ -48,7 +47,7 @@ import SparklesText from "./SparklesText.vue";
       <div class="deng">
         <div class="xian"></div>
         <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">新</div></div>
+          <div class="deng-b"><div class="deng-t">国</div></div>
         </div>
         <div class="shui shui-a">
           <div class="shui-c"></div>
@@ -62,7 +61,7 @@ import SparklesText from "./SparklesText.vue";
       <div class="deng">
         <div class="xian"></div>
         <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">快</div></div>
+          <div class="deng-b"><div class="deng-t">民</div></div>
         </div>
         <div class="shui shui-a">
           <div class="shui-c"></div>
@@ -76,7 +75,7 @@ import SparklesText from "./SparklesText.vue";
       <div class="deng">
         <div class="xian"></div>
         <div class="deng-a">
-          <div class="deng-b"><div class="deng-t">乐</div></div>
+          <div class="deng-b"><div class="deng-t">安</div></div>
         </div>
         <div class="shui shui-a">
           <div class="shui-c"></div>

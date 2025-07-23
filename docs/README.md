@@ -19,6 +19,3 @@ config:
           text: CSDN👉
           link: https://blog.csdn.net/weixin_46252229?type=blog
 ---
-
-<!-- more -->
-type: hero | banner
