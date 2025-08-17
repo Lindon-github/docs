@@ -7,6 +7,10 @@ sticky: true
 ---
 <Swiper :items="['https://test.hnnfs.com/html/img/index_bng.jpg', 'https://test.hnnfs.com/html/img/index_bng.jpg']" />
 
+[//]: # (@[artPlayer]&#40;https://artplayer.org/assets/sample/video.mp4&#41;)
+
+[//]: # (@[artPlayer]&#40;/videos/倪海厦《天纪》全集-24/1-倪海厦《天纪》全集-01-480P 标清-AVC.mp4&#41;)
+
 春节，作为中华民族最隆重的传统佳节，承载着深厚的文化底蕴和民族情感。它不仅是一个节日，更是一段连接过去与未来、家庭与社会的情感纽带。随着时代的变迁，春节也在不断演变和发展，既保留了传统的习俗，又融入了现代元素。本文将带您走进2025年的春节，感受这个古老节日在新时代的独特魅力。
 <!-- more -->
 ## 一、传统习俗的传承
